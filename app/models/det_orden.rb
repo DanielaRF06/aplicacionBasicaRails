@@ -1,0 +1,2 @@
+class DetOrden < ApplicationRecord
+end

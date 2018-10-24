@@ -10,11 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_24_185006) do
+ActiveRecord::Schema.define(version: 2018_10_24_204025) do
 
   create_table "clientes", force: :cascade do |t|
-    t.string "rfc"
     t.string "nom_c"
+    t.string "rfc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "det_ordens", force: :cascade do |t|
+    t.integer "id_prod"
+    t.integer "cantidad"
+    t.float "precio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ordenes", force: :cascade do |t|
+    t.integer "id_c"
+    t.integer "nOrden"
+    t.date "fecha"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "productos", force: :cascade do |t|
+    t.integer "id_p"
+    t.string "nom_pr"
+    t.float "precio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

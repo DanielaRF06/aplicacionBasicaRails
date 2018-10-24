@@ -1,28 +1,30 @@
-<html>
-    <head>
-        <title>Lista de Clientes </title>
-    </head>
+<p id="notice"><%= notice %></p>
 
-    <body>
-        <table>
-            <tr>
-                <%= @clientes.each do |c| %>
-                <thead>
-                    <th>Nombre</th>
-                    <th>RFC</th>
-                </thead>
-            </tr>
+<h1>Clientes</h1>
 
-            <tr>
-                <td><%= c.nom_c%></td>
-                <td><%= c.rfc%></td> 
-                <td>    
-                    <%= link_to"Mostrar"%>
-                    <%= link_to"Editar"%>
-                    <%= link_to"Eliminar"%>
-                </td>                
-            </tr>
-            <%end%>
-        </table>
-    </body>
-</html>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre </th>
+      <th>RFC</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clientes.each do |cliente| %>
+      <tr>
+        <td><%= cliente.id %></td>
+        <td><%= cliente.nom_c %></td>
+        <td><%= cliente.rfc %></td>
+        <td><%= link_to 'Mostrar', cliente %></td>
+        <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
+        <td><%= link_to 'Eliminar', cliente, method: :delete, data: { confirm: '¿Seguro que desea eliminar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Registrar Cliente', new_cliente_path %>

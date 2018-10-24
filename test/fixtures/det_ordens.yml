@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nom_c: MyString
-  rfc: MyString
+  id_prod: 1
+  cantidad: 1
+  precio: 1.5
 
 two:
-  nom_c: MyString
-  rfc: MyString
+  id_prod: 1
+  cantidad: 1
+  precio: 1.5

@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nom_c: MyString
-  rfc: MyString
+  id_c: 1
+  nOrden: 1
+  fecha: 2018-10-24
 
 two:
-  nom_c: MyString
-  rfc: MyString
+  id_c: 1
+  nOrden: 1
+  fecha: 2018-10-24
