@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Lista de Clientes </title>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <%= @clientes.each do |c| %>
+                <thead>
+                    <th>Nombre</th>
+                    <th>RFC</th>
+                </thead>
+            </tr>
+
+            <tr>
+                <td><%= c.nom_c%></td>
+                <td><%= c.rfc%></td> 
+                <td>    
+                    <%= link_to"Mostrar"%>
+                    <%= link_to"Editar"%>
+                    <%= link_to"Eliminar"%>
+                </td>                
+            </tr>
+            <%end%>
+        </table>
+    </body>
+</html>
